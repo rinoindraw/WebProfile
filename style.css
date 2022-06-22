@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+
+body{
+    margin: 0;
+    line-height: 1.5;
+    background-color: #EDE6DB;
+}
+
+body,input,textarea,button{
+    font-family: 'MedievalSharp', cursive;
+    font-weight: 400;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*kalo warna taruh di class*/
+/*header*/
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.header .student-name{
+    /*background-color: aqua;*/
+    padding: 0 15px;
+}
+
+.header .student-name a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #F7F5F2;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.header .nav{
+    /*background-color: blueviolet;*/
+    padding: 0 15px;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.header .nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header .nav ul li{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.header .nav ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #40DFEF;
+    padding: 25px 0;
+    display: block;
+    transition: all 0.5s ease;/*efek*/
+}
+
+.header .nav ul li a:hover{
+    color: #FFA8A8;
+}
+/*home section*/
+.home-section{
+    min-height: 100vh;
+    background-image: url('Img/Cover/1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.home-section::before{ /*yang ada ::before itu buat advance edit contoh kayak garis bawah tittle*/
+    content: '' ;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.home-section .shape-01{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border: 4px solid transparent;
+    border-image:linear-gradient(10deg, #FFA8A8, #40DFEF);
+    border-image-slice:1;
+    right: 5%;
+    top: 20%;
+    animation: ani01 5s linear infinite;/*efek*/
+}
+
+@keyframes ani01{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.home-section .row{
+    min-height: 100vh;
+}
+
+.home-section .home-content{
+    /*background-color: aqua;*/
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.home-section .home-content h4{
+    font-size: 20px;
+    color: #DFDFDE;
+    margin: 0;
+    animation: hch4 1.5s ease;
+}
+
+@keyframes hch4{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.home-section .home-content h1{
+    font-size: 23px;
+    margin: 0;
+    color: #F7F5F2;
+    text-transform: 100%;
+    font-weight: 900;
+    letter-spacing: 10px;
+    animation: hch4 3s ease;
+}
+
+/*animasi text dari kanan gerak ke kiri*/
+@keyframes college-student{
+    from{margin-left: 10%;}
+    to{margin-right: 0%;}
+}
+
+.home-section .scroll-down{
+    /*background-color: aqua;*/
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    height: 30px;
+    width: 30px;
+    margin-left: -15px;
+    animation: scroll-down 2s ease infinite;/*efek*/
+}
+
+@keyframes scroll-down{
+    0%,20%,50%,80%,100%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    60%{
+        transform: translateY(-15px);
+    }
+}
+
+.home-section .scroll-down img{
+    width: 25px;
+    display: block;
+    margin: 2px auto;
+}
+
+/*about section*/
+.about-section{
+    padding: 80px 0 0;
+}
+
+.about-section .about-img{
+    /*background-color: aqua;*/
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 15px;
+}
+
+.about-section .about-img .img-box img{
+    width: 100%;
+    display: block; /*buat nimpa belakangnya/presisi*/
+    height: 475px;
+    -webkit-box-shadow:0px 1px 5px #1B1A17;
+    -moz-box-shadow:0px 1px 5px #1B1A17;
+    box-shadow:0px 1px 5px #1B1A17;
+}
+
+.about-section .about-content{
+    /*background-color: deeppink;*/
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+    padding: 0 15px;
+}
+
+.section-tittle{
+    /*background-color: deepskyblue;*/
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.about-section .section-tittle{
+    padding: 0;
+}
+
+.section-tittle h1{
+    /*background-color: deeppink;*/
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+    color: #000000;
+}
+
+.section-tittle h1::before{
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 80px;
+    height: 3px;
+    background-color: deepskyblue;
+}
+
+.about-section .about-content p{
+    font-size: 16px;
+    color: deeppink;
+    line-height: 26px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.about-section .about-content .almamater .almamater-box{
+    /*background-color: aqua;*/
+    flex: 0 0 30%;
+    max-width: 50%;
+    padding: 0 15px;
+    text-align: center;
+    margin-top: 30px    ;
+}
+
+.about-section .about-content .almamater .almamater-box h3{
+    font-size: 17px;
+    color: #000000;
+    margin: 0 0 10px;
+}
+
+.about-section .about-content .almamater .almamater-box img{
+    max-width: 60%;
+}
+
+.about-section .about-content .almamater #hmsk{
+    margin: 30px 20px;  
+}
+
+.about-section .about-content a{
+    background-color: deepskyblue;
+    padding: 10px 25px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    line-height: 1.5;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin: 0 15px;
+    transition: all 0.5s ease;
+}
+
+.about-section .about-content a:hover{
+    background-color: transparent;
+    border: 2px solid deepskyblue;
+    color: deepskyblue;
+}
+
+.about-section .about-content a:focus{
+    outline: none;
+}
+
+.about-section .about-img .img-box{
+    position: relative; /*untuk ngeluarin efek shape diatas nya harus dikasih position relative*/
+}
+
+.about-section .about-img .img-box .shape-02{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border: 4px solid transparent;
+    border-image:linear-gradient(10deg, #FFA8A8, #40DFEF);
+    border-image-slice:1;
+    left: 30px;/*kalau absolute pakai top left bottom atau right*/
+    top: 30px;
+    -webkit-box-shadow:0px 1px 5px #1B1A17;
+    -moz-box-shadow:0px 1px 5px #1B1A17;
+    box-shadow:0px 1px 5px #1B1A17;
+    animation: ani01 5s linear infinite;/*efek*/
+}
+
+/*skill section*/
+.skill-section{
+    padding: 80px 0 80px;
+}
+
+.skill-section p{
+    font-size: 16px;
+    color: deeppink;
+    line-height: 26px;
+    margin-top: 30px;
+    flex: 0 0 30%;
+}
+
+.skill-section .skill-item{ 
+    max-width: 35%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.skill-section .skill-item .skill-item-inner{
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-section .skill-item .skill-item-inner img{
+    max-width: 100%;
+    display: block;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+}
+
+.skill-section .skill-item .skill-item-inner:hover img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.skill-section .skill-item .skill-item-inner .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.skill-section .skill-item .skill-item-inner:hover .overlay{
+    background-color: transparent;
+}
+
+.skill-section .skill-item .skill-item-inner .overlay h4{
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    transition: all 0.5s ease;
+    text-transform: capitalize;
+}
+
+.skill-section .skill-item .skill-item-inner .overlay:hover h4{
+    transform: translatex(30px);
+    opacity: 0;
+}
+
+/*work section*/
+.work-section{
+    padding: 0 0 80px;
+}
+
+.work-section h1{
+    margin: -30px 0;
+}
+
+.work-section .work-item{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.work-section .work-item img{
+    width: 100%;
+    display: block;
+    transform: scale(1.1); /*ini buat lebar/efek di gambar*/
+    transition: all 0.5s ease;
+}
+
+.work-section .work-item:hover img{
+    filter: grayscale(100%);
+    transform: scale(1);
+}
+
+.work-section .work-item-inner{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.work-section .work-item-inner .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.6);
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.work-section .work-item-inner:hover .overlay{
+    opacity: 1;
+}
+
+.work-section .work-item-inner .overlay h4{
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0;
+    transform: translateX(30px);
+    transition: all 0.5s ease;
+}
+
+.work-section .section-tittle h2{
+    color: deeppink;
+    line-height: 26px;
+    margin-top: 30px;
+    flex: 0 0 30%;
+}
+
+/*Lightbox*/
+.lightbox{
+    position: fixed;
+    z-index: 1099;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    display: none;
+}
+
+.lightbox.open{ /*jangan di spasi class nya karena dari jquery*/
+    display: flex; /*buka di jquery*/
+}
+
+.lightbox .lightbox-img{ /*buat button*/
+    /*max-height: 600px;*/
+    display: flex;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    padding: 40px 0;
+    /*background-color: darkcyan;*/
+}
+
+.lightbox .img-box{
+    position: relative;
+    cursor: auto;
+}
+
+.lightbox .lightbox-close{
+    height: 30px;
+    width: 30px;
+    /*background-color: darkorchid;*/
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 26px;
+    cursor: pointer;
+}
+
+.lightbox .lightbox-caption{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.lightbox .lightbox-caption .lightbox-category{
+    /*background-color: darkcyan;*/
+    padding-right: 50px;
+}
+
+.lightbox .lightbox-controls .prev,
+.lightbox .lightbox-controls .next{
+    position: absolute;
+    height: calc(100% - 80px); /*kalkulasi (spasi berguna ya)*/
+    top: 40px;
+    /*background-color: darkgreen;*/
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.lightbox .lightbox-controls .prev{
+    left: 0;
+    width: 50%;
+    justify-content: flex-start;
+    padding-left: 5px;
+}
+
+.lightbox .lightbox-controls .next{
+    right: 0;
+    width: 50%;
+    justify-content: flex-end;
+    padding-right: 5px;
+}
+
+.lightbox .lightbox-controls .prev img,
+.lightbox .lightbox-controls .next img{
+    width: 30px;
+    height: 30px;
+    padding: 0.5px;
+    border-radius: 2px;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.lightbox .lightbox-controls .prev:hover img,
+.lightbox .lightbox-controls .next:hover img{
+    opacity: 1;
+}
+
+/* Contact Section*/
+.contact-section{
+    padding: 0px 0 80px;
+}
+
+.contact-section .contact-img{
+    /* background-color: red; */
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding: 0 15px;
+}
+
+.contact-section .contact-img .img-box{
+    /*background-color: aqua;*/
+    padding: 200px 0;
+    background-image: url('Img/Cover/1.jpg');
+    /*ini buat posisi background*/
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    font-weight: 700;
+
+}
+
+.contact-section .section-tittle{
+    text-align: center;
+}
+
+.contact-section .section-tittle h1{
+    color: #ffffff;
+    padding: 15px 10px;
+    border-radius: 20px;
+}
+
+.contact-section .section-tittle h1::before{
+    background-color: deeppink;
+    left: 50%;
+    margin-left: -40px;
+    top: 85%;
+}
+
+.contact-section li{
+    list-style: none;
+}
+
+.contact-section .contact-nav .contact-list{
+    display: inline-block;
+    padding: 15px 45px;
+    background-color: #354259;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #354259;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+.contact-section .contact-nav .contact-list:hover{
+    border: 2px solid #FF5D5D;
+    background-color: transparent;
+    color: #354259;
+}
+
+.contact-section .contact-nav p{
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 26px;
+    margin: 0;
+    font-weight: bold;
+}
